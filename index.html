@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadGuard Pro - Stop Losing Insurance Leads Forever</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'insurance-blue': '#1e40af',
+                        'insurance-gold': '#f59e0b',
+                        'success-green': '#10b981',
+                        'danger-red': '#ef4444',
+                        'dark-navy': '#0f172a',
+                        'light-navy': '#1e293b',
+                        'accent-blue': '#3b82f6',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af, #3b82f6, #f59e0b);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .timeline-line {
+            background: linear-gradient(to bottom, #1e40af, #3b82f6, #f59e0b);
+        }
+        
+        .step-indicator {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            box-shadow: 0 0 30px rgba(30, 64, 175, 0.5);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .insurance-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(30, 64, 175, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+        
+        .pulse-ring {
+            animation: pulseRing 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+        
+        @keyframes pulseRing {
+            0% { transform: scale(0.8); opacity: 1; }
+            80%, 100% { transform: scale(1.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-dark-navy text-white font-display overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold flex items-center">
+                <div class="w-10 h-10 bg-gradient-to-br from-insurance-blue to-accent-blue rounded-xl mr-3 flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-white"></i>
+                </div>
+                <span class="gradient-text">LeadGuard Pro</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#problem" class="hover:text-insurance-gold transition-colors">The Problem</a>
+                <a href="#solution" class="hover:text-insurance-gold transition-colors">Our Solution</a>
+                <a href="#calculator" class="hover:text-insurance-gold transition-colors">ROI Calculator</a>
+                <a href="#proof" class="hover:text-insurance-gold transition-colors">Proof</a>
+            </div>
+            <button class="bg-gradient-to-r from-insurance-blue to-accent-blue text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-all shadow-lg">
+                Get Free Analysis
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-32 insurance-pattern">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Headline -->
+                <div class="animate-fade-in">
+                    <div class="inline-flex items-center bg-insurance-blue/20 border border-insurance-blue/30 rounded-full px-6 py-3 mb-8">
+                        <div class="w-3 h-3 bg-insurance-blue rounded-full animate-pulse mr-3"></div>
+                        <span class="text-insurance-blue font-semibold">LEADGUARD PRO</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                        Stop Losing<br>
+                        <span class="gradient-text">Insurance Leads</span><br>
+                        Forever
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                        Turn your broken follow-up system into an automated revenue machine that never lets a qualified prospect slip away.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 animate-scale-in">
+                        <button class="bg-gradient-to-r from-success-green to-insurance-gold text-white px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-all shadow-2xl whitespace-nowrap">
+                            Get Started
+                        </button>
+                        <button class="glass-card px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-all border border-white/20">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Revenue Loss Ticker -->
+                <div class="animate-slide-up">
+                    <div class="glass-card p-8 rounded-3xl border border-danger-red/30 bg-danger-red/5">
+                        <div class="text-center mb-6">
+                            <div class="text-danger-red text-2xl font-bold mb-2">REVENUE BLEEDING RIGHT NOW</div>
+                            <div class="text-sm text-gray-400">Without proper lead follow-up</div>
+                        </div>
+                        
+                        <!-- Live Loss Counter -->
+                        <div class="text-center mb-8">
+                            <div class="text-5xl font-black text-danger-red mb-2 stat-counter" id="lossCounter">$0</div>
+                            <div class="text-sm text-gray-400">Lost today across insurance industry</div>
+                        </div>
+                        
+                        <!-- Breakdown -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-black/20 rounded-lg">
+                                <span class="text-gray-300">Missed Follow-ups</span>
+                                <span class="text-danger-red font-bold" id="missedFollowups">2,847</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 bg-black/20 rounded-lg">
+                                <span class="text-gray-300">Dead Leads</span>
+                                <span class="text-danger-red font-bold" id="deadLeads">1,923</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 bg-black/20 rounded-lg">
+                                <span class="text-gray-300">Lost Commissions</span>
+                                <span class="text-danger-red font-bold" id="lostCommissions">$847,293</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Projection -->
+                        <div class="mt-6 p-4 bg-insurance-gold/10 border border-insurance-gold/30 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-insurance-gold font-semibold mb-1">Your Potential Monthly Loss</div>
+                                <div class="text-2xl font-black text-insurance-gold" id="personalLoss">$2,847</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 mb-16 animate-fade-in">
+                <div class="glass-card p-8 rounded-2xl border border-danger-red/30 text-center hover-lift">
+                    <div class="text-5xl font-black text-danger-red mb-4">78%</div>
+                    <div class="text-base text-gray-300 leading-relaxed">of insurance leads never get a second follow-up</div>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-danger-red/30 text-center hover-lift">
+                    <div class="text-5xl font-black text-danger-red mb-4">5 MIN</div>
+                    <div class="text-base text-gray-300 leading-relaxed">response time = 80% close rate</div>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-danger-red/30 text-center hover-lift">
+                    <div class="text-5xl font-black text-danger-red mb-4">$50K+</div>
+                    <div class="text-base text-gray-300 leading-relaxed">average annual loss per broker</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-24 bg-light-navy relative" id="problem">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">
+                    The Insurance Lead
+                    <span class="gradient-text">Death Spiral</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Here's exactly what happens to your leads (and your money) every single day
+                </p>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line rounded-full"></div>
+                
+                <!-- Timeline Steps -->
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="glass-card p-8 rounded-2xl hover-lift">
+                                <div class="text-success-green text-3xl mb-4">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-success-green">Lead Comes In</h3>
+                                <p class="text-gray-300 mb-4">
+                                    Prospect fills out your form, excited about getting insurance quotes. 
+                                    They're ready to buy TODAY.
+                                </p>
+                                <div class="text-sm text-success-green font-semibold">
+                                    ✓ Hot Lead Temperature: 🔥🔥🔥
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 step-indicator rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            1
+                        </div>
+                        <div class="w-1/2 pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-insurance-gold rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            2
+                        </div>
+                        <div class="w-1/2 pl-12">
+                            <div class="glass-card p-8 rounded-2xl hover-lift">
+                                <div class="text-insurance-gold text-3xl mb-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-insurance-gold">The Wait Begins</h3>
+                                <p class="text-gray-300 mb-4">
+                                    Lead sits in your CRM. You're busy with other clients. 
+                                    "I'll call them later" becomes tomorrow, then next week.
+                                </p>
+                                <div class="text-sm text-insurance-gold font-semibold">
+                                    ⚠️ Lead Temperature: 🔥🔥
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-orange-500/30">
+                                <div class="text-orange-500 text-3xl mb-4">
+                                    <i class="fas fa-phone-slash"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-orange-500">First Call Attempt</h3>
+                                <p class="text-gray-300 mb-4">
+                                    You finally call. No answer. You leave a voicemail (maybe). 
+                                    No follow-up system kicks in automatically.
+                                </p>
+                                <div class="text-sm text-orange-500 font-semibold">
+                                    ⚠️ Lead Temperature: 🔥
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            3
+                        </div>
+                        <div class="w-1/2 pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-danger-red rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            4
+                        </div>
+                        <div class="w-1/2 pl-12">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-danger-red/30">
+                                <div class="text-danger-red text-3xl mb-4">
+                                    <i class="fas fa-snowflake"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-danger-red">Lead Goes Cold</h3>
+                                <p class="text-gray-300 mb-4">
+                                    Days pass. Prospect gets quotes from 3 competitors. 
+                                    They buy elsewhere. Your $45 lead cost = $0 return.
+                                </p>
+                                <div class="text-sm text-danger-red font-semibold">
+                                    ❄️ Lead Temperature: DEAD
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Final Impact -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-danger-red/50 bg-danger-red/10">
+                                <div class="text-danger-red text-4xl mb-4">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4 text-danger-red">The Brutal Reality</h3>
+                                <div class="space-y-3 text-lg">
+                                    <div class="flex justify-between">
+                                        <span>Lost Sale:</span>
+                                        <span class="text-danger-red font-bold">-$800</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Wasted Ad Spend:</span>
+                                        <span class="text-danger-red font-bold">-$45</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Time Wasted:</span>
+                                        <span class="text-danger-red font-bold">-2 hours</span>
+                                    </div>
+                                    <div class="border-t border-danger-red/30 pt-3 flex justify-between text-xl font-bold">
+                                        <span>Total Loss:</span>
+                                        <span class="text-danger-red">-$845</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-20 h-20 bg-danger-red rounded-full flex items-center justify-center text-white font-bold text-2xl z-10 pulse-ring">
+                            💀
+                        </div>
+                        <div class="w-1/2 pl-12"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom CTA -->
+            <div class="text-center mt-20">
+                <div class="glass-card p-8 rounded-2xl border border-danger-red/30 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4 text-danger-red">This Happens 50+ Times Per Month</h3>
+                    <p class="text-gray-300 mb-6">
+                        Multiply this by your monthly lead volume. That's your real revenue loss.
+                    </p>
+                    <button class="bg-gradient-to-r from-success-green to-insurance-gold text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all whitespace-nowrap">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Timeline -->
+    <section class="py-24 bg-dark-navy" id="solution">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">
+                    The LeadGuard Pro
+                    <span class="gradient-text">Recovery System</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Here's exactly how we plug your revenue leaks and turn every lead into a paying customer
+                </p>
+            </div>
+            
+            <!-- Solution Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-success-green to-insurance-gold rounded-full"></div>
+                
+                <!-- Solution Steps -->
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-success-green/30">
+                                <div class="text-success-green text-3xl mb-4">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-success-green">Instant Detection</h3>
+                                <p class="text-gray-300 mb-4">
+                                    Lead comes in → System detects it in under 30 seconds → 
+                                    Immediately triggers our 5-step recovery sequence.
+                                </p>
+                                <div class="text-sm text-success-green font-semibold">
+                                    ⚡ Response Time: &lt; 30 seconds
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-success-green rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            1
+                        </div>
+                        <div class="w-1/2 pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-insurance-blue rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            2
+                        </div>
+                        <div class="w-1/2 pl-12">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-insurance-blue/30">
+                                <div class="text-insurance-blue text-3xl mb-4">
+                                    <i class="fas fa-sms"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-insurance-blue">Smart SMS Sequence</h3>
+                                <p class="text-gray-300 mb-4">
+                                    Personalized SMS sent immediately: "Hi [Name], got your insurance request. 
+                                    Checking rates now - expect my call in 5 minutes!"
+                                </p>
+                                <div class="text-sm text-insurance-blue font-semibold">
+                                    📱 98% open rate within 3 minutes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-insurance-gold/30">
+                                <div class="text-insurance-gold text-3xl mb-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-insurance-gold">Priority Call Alert</h3>
+                                <p class="text-gray-300 mb-4">
+                                    You get instant notification with lead details, best time to call, 
+                                    and pre-written talking points. No more cold calling.
+                                </p>
+                                <div class="text-sm text-insurance-gold font-semibold">
+                                    📞 73% answer rate (vs 23% industry average)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-insurance-gold rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            3
+                        </div>
+                        <div class="w-1/2 pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-accent-blue rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            4
+                        </div>
+                        <div class="w-1/2 pl-12">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-accent-blue/30">
+                                <div class="text-accent-blue text-3xl mb-4">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-accent-blue">Auto-Scheduling</h3>
+                                <p class="text-gray-300 mb-4">
+                                    If they don't answer, system automatically sends calendar link via SMS and email. 
+                                    "Missed your call - book your free quote here: [link]"
+                                </p>
+                                <div class="text-sm text-accent-blue font-semibold">
+                                    📅 67% book appointments automatically
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-success-green/30">
+                                <div class="text-success-green text-3xl mb-4">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-success-green">Never-Ending Follow-Up</h3>
+                                <p class="text-gray-300 mb-4">
+                                    System continues following up for 90 days with value-added content, 
+                                    rate alerts, and appointment reminders. Never lets a lead die.
+                                </p>
+                                <div class="text-sm text-success-green font-semibold">
+                                    🔄 34% of sales happen after day 30
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-success-green rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
+                            5
+                        </div>
+                        <div class="w-1/2 pl-12"></div>
+                    </div>
+                    
+                    <!-- Final Result -->
+                    <div class="flex items-center relative">
+                        <div class="w-1/2 pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-20 h-20 bg-success-green rounded-full flex items-center justify-center text-white font-bold text-2xl z-10">
+                            💰
+                        </div>
+                        <div class="w-1/2 pl-12">
+                            <div class="glass-card p-8 rounded-2xl hover-lift border border-success-green/50 bg-success-green/10">
+                                <div class="text-success-green text-4xl mb-4">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4 text-success-green">The Results</h3>
+                                <div class="space-y-3 text-lg">
+                                    <div class="flex justify-between">
+                                        <span>Close Rate:</span>
+                                        <span class="text-success-green font-bold">+73%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Response Rate:</span>
+                                        <span class="text-success-green font-bold">+156%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Revenue Per Lead:</span>
+                                        <span class="text-success-green font-bold">+$420</span>
+                                    </div>
+                                    <div class="border-t border-success-green/30 pt-3 flex justify-between text-xl font-bold">
+                                        <span>Monthly Increase:</span>
+                                        <span class="text-success-green">+$18,400</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="py-24 bg-light-navy" id="calculator">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">
+                    Calculate Your
+                    <span class="gradient-text">Revenue Recovery</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    See exactly how much money you're losing and what LeadGuard Pro can recover
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Calculator Inputs -->
+                <div class="glass-card p-8 rounded-3xl">
+                    <h3 class="text-2xl font-bold mb-8 gradient-text">Your Current Numbers</h3>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block text-lg font-semibold mb-4 text-gray-300">Monthly Leads</label>
+                            <input type="range" id="monthlyLeads" min="10" max="200" value="50" class="w-full h-3 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-sm text-gray-400 mt-2">
+                                <span>10</span>
+                                <span id="leadsValue" class="text-insurance-blue font-bold text-lg">50</span>
+                                <span>200+</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-semibold mb-4 text-gray-300">Average Policy Value</label>
+                            <input type="range" id="policyValue" min="300" max="3000" value="800" class="w-full h-3 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-sm text-gray-400 mt-2">
+                                <span>$300</span>
+                                <span id="policyDisplay" class="text-insurance-blue font-bold text-lg">$800</span>
+                                <span>$3000+</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-semibold mb-4 text-gray-300">Current Close Rate</label>
+                            <input type="range" id="closeRate" min="5" max="40" value="12" class="w-full h-3 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-sm text-gray-400 mt-2">
+                                <span>5%</span>
+                                <span id="closeDisplay" class="text-insurance-blue font-bold text-lg">12%</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-semibold mb-4 text-gray-300">Cost Per Lead</label>
+                            <input type="range" id="leadCost" min="20" max="150" value="45" class="w-full h-3 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-sm text-gray-400 mt-2">
+                                <span>$20</span>
+                                <span id="costDisplay" class="text-insurance-blue font-bold text-lg">$45</span>
+                                <span>$150+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results -->
+                <div class="space-y-6">
+                    <!-- Current Performance -->
+                    <div class="glass-card p-6 rounded-2xl border border-danger-red/30">
+                        <h4 class="text-xl font-bold mb-4 text-danger-red flex items-center">
+                            <i class="fas fa-chart-line-down mr-3"></i>
+                            Current Performance
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-3xl font-black text-danger-red" id="currentRevenue">$4,800</div>
+                                <div class="text-sm text-gray-400">Monthly Revenue</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-black text-danger-red" id="wastedSpend">$1,980</div>
+                                <div class="text-sm text-gray-400">Wasted on Dead Leads</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- With LeadGuard Pro -->
+                    <div class="glass-card p-6 rounded-2xl border border-success-green/30">
+                        <h4 class="text-xl font-bold mb-4 text-success-green flex items-center">
+                            <i class="fas fa-rocket mr-3"></i>
+                            With LeadGuard Pro
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-3xl font-black text-success-green" id="newRevenue">$12,400</div>
+                                <div class="text-sm text-gray-400">New Monthly Revenue</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-black text-insurance-gold" id="additionalRevenue">+$7,600</div>
+                                <div class="text-sm text-gray-400">Additional Monthly</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Annual Impact -->
+                    <div class="glass-card p-8 rounded-2xl border border-insurance-gold/30 bg-insurance-gold/5">
+                        <h4 class="text-2xl font-bold mb-6 text-insurance-gold text-center">Annual Impact</h4>
+                        <div class="text-center">
+                            <div class="text-5xl font-black text-insurance-gold mb-4" id="annualGain">+$91,200</div>
+                            <div class="text-lg text-gray-300 mb-6">Additional Annual Revenue</div>
+                            
+                            <!-- ROI Visualization -->
+                            <div class="relative w-40 h-40 mx-auto mb-6">
+                                <svg class="w-40 h-40 transform -rotate-90" viewBox="0 0 144 144">
+                                    <circle cx="72" cy="72" r="60" stroke="#374151" stroke-width="12" fill="none"/>
+                                    <circle id="roiCircle" cx="72" cy="72" r="60" stroke="#f59e0b" stroke-width="12" fill="none" 
+                                            stroke-dasharray="377" stroke-dashoffset="94" class="transition-all duration-1000"/>
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-insurance-gold" id="roiPercent">1,540%</div>
+                                        <div class="text-sm text-gray-400">ROI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="text-lg font-semibold text-success-green">Payback Time</div>
+                                <div class="text-3xl font-bold text-success-green" id="paybackTime">8 days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="text-center mt-16">
+                <div class="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Stop the Revenue Bleeding?</h3>
+                    <p class="text-gray-300 mb-6">
+                        Get a free audit of your current lead follow-up system and see exactly where you're losing money.
+                    </p>
+                    <button class="bg-gradient-to-r from-success-green to-insurance-gold text-white px-12 py-6 rounded-xl text-xl font-bold hover:scale-105 transition-all shadow-2xl whitespace-nowrap">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-24 bg-dark-navy" id="proof">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">
+                    Real Brokers,
+                    <span class="gradient-text">Real Results</span>
+                </h2>
+                <p class="text-xl text-gray-300">
+                    See how LeadGuard Pro transformed these insurance businesses
+                </p>
+            </div>
+            
+            <!-- Results Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="glass-card p-8 rounded-2xl hover-lift text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-insurance-blue to-accent-blue rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl">
+                        JM
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">John Martinez</h3>
+                    <p class="text-gray-400 mb-4">Medicare Specialist, FL</p>
+                    <div class="text-3xl font-black text-success-green mb-2">+$127K</div>
+                    <p class="text-sm text-gray-300">Additional revenue in 6 months</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl hover-lift text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-success-green to-insurance-gold rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl">
+                        SC
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sarah Chen</h3>
+                    <p class="text-gray-400 mb-4">Life Insurance Broker, CA</p>
+                    <div class="text-3xl font-black text-success-green mb-2">+$216K</div>
+                    <p class="text-sm text-gray-300">Annual revenue increase</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl hover-lift text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-insurance-gold to-accent-blue rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl">
+                        MR
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mike Rodriguez</h3>
+                    <p class="text-gray-400 mb-4">Commercial Insurance, TX</p>
+                    <div class="text-3xl font-black text-success-green mb-2">+$340K</div>
+                    <p class="text-sm text-gray-300">Revenue recovered in first year</p>
+                </div>
+            </div>
+            
+            <!-- Detailed Testimonial -->
+            <div class="glass-card p-12 rounded-3xl max-w-4xl mx-auto">
+                <div class="text-6xl text-insurance-gold mb-6 text-center">"</div>
+                <p class="text-2xl md:text-3xl font-semibold mb-8 text-center leading-relaxed">
+                    I was losing $3,000 every month in dead leads. LeadGuard Pro turned that around in 30 days. 
+                    Now I'm making an extra $18K monthly. This system literally saved my business.
+                </p>
+                <div class="flex items-center justify-center space-x-6">
+                    <div class="w-24 h-24 bg-gradient-to-br from-success-green to-insurance-gold rounded-full flex items-center justify-center text-white font-bold text-3xl">
+                        SC
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold">Sarah Chen</div>
+                        <div class="text-gray-400 text-lg">Life Insurance Broker, California</div>
+                        <div class="text-success-green font-semibold">600% ROI in first 90 days</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-gradient-to-t from-dark-navy to-light-navy relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="mb-8">
+                <div class="inline-flex items-center bg-success-green/20 border border-success-green/30 rounded-full px-8 py-4 mb-8">
+                    <div class="w-4 h-4 bg-success-green rounded-full animate-pulse mr-4"></div>
+                    <span class="text-success-green font-bold text-lg">LIMITED TIME: FREE SETUP + 30-DAY TRIAL</span>
+                </div>
+            </div>
+            
+            <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+                Stop Losing Money.<br>
+                <span class="gradient-text">Start Making More.</span>
+            </h2>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Every day you wait is another $200+ in lost revenue. 
+                Join 500+ insurance brokers who've already plugged their revenue leaks.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                <button class="bg-gradient-to-r from-success-green to-insurance-gold text-white px-16 py-8 rounded-2xl text-2xl font-bold hover:scale-105 transition-all shadow-2xl whitespace-nowrap">
+                    Get Started
+                </button>
+                <button class="glass-card px-16 py-8 rounded-2xl text-2xl font-bold hover:scale-105 transition-all border border-white/20">
+                    Watch 3-Minute Demo
+                </button>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-black text-success-green">$8.4M+</div>
+                    <div class="text-gray-400">Revenue Recovered</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-black text-insurance-blue">500+</div>
+                    <div class="text-gray-400">Active Brokers</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-black text-insurance-gold">94%</div>
+                    <div class="text-gray-400">Success Rate</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-black text-accent-blue">24/7</div>
+                    <div class="text-gray-400">Support</div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-400 text-lg mb-4">
+                    No contracts. No setup fees. Cancel anytime.
+                </p>
+                <div class="flex justify-center space-x-8 text-sm text-gray-500">
+                    <span>✓ HIPAA Compliant</span>
+                    <span>✓ SOC 2 Certified</span>
+                    <span>✓ 99.9% Uptime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-navy border-t border-gray-800 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-3xl font-bold flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-insurance-blue to-accent-blue rounded-xl mr-3 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <span class="gradient-text">LeadGuard Pro</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Stopping revenue leaks for insurance brokers who refuse to lose deals.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Integrations</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">ROI Calculator</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Best Practices</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-insurance-gold transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 LeadGuard Pro. All rights reserved. Protecting your revenue, one lead at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Live Revenue Loss Counter and Ticker
+        function startLossCounter() {
+            const counter = document.getElementById('lossCounter');
+            const missedFollowups = document.getElementById('missedFollowups');
+            const deadLeads = document.getElementById('deadLeads');
+            const lostCommissions = document.getElementById('lostCommissions');
+            const personalLoss = document.getElementById('personalLoss');
+            
+            let currentLoss = 847293;
+            let followups = 2847;
+            let leads = 1923;
+            let commissions = 847293;
+            let personal = 2847;
+            
+            const increment = 4.73; // Average loss per second across industry
+            const followupIncrement = 0.12;
+            const leadIncrement = 0.08;
+            const commissionIncrement = 4.73;
+            const personalIncrement = 0.15;
+            
+            setInterval(() => {
+                currentLoss += increment;
+                followups += followupIncrement;
+                leads += leadIncrement;
+                commissions += commissionIncrement;
+                personal += personalIncrement;
+                
+                counter.textContent = '$' + Math.floor(currentLoss).toLocaleString();
+                missedFollowups.textContent = Math.floor(followups).toLocaleString();
+                deadLeads.textContent = Math.floor(leads).toLocaleString();
+                lostCommissions.textContent = '$' + Math.floor(commissions).toLocaleString();
+                personalLoss.textContent = '$' + Math.floor(personal).toLocaleString();
+            }, 1000);
+        }
+
+        // ROI Calculator
+        function setupCalculator() {
+            const inputs = {
+                monthlyLeads: document.getElementById('monthlyLeads'),
+                policyValue: document.getElementById('policyValue'),
+                closeRate: document.getElementById('closeRate'),
+                leadCost: document.getElementById('leadCost')
+            };
+            
+            const displays = {
+                leadsValue: document.getElementById('leadsValue'),
+                policyDisplay: document.getElementById('policyDisplay'),
+                closeDisplay: document.getElementById('closeDisplay'),
+                costDisplay: document.getElementById('costDisplay')
+            };
+            
+            function updateCalculator() {
+                const values = {
+                    monthlyLeads: parseInt(inputs.monthlyLeads.value),
+                    policyValue: parseInt(inputs.policyValue.value),
+                    closeRate: parseInt(inputs.closeRate.value) / 100,
+                    leadCost: parseInt(inputs.leadCost.value)
+                };
+                
+                // Update displays
+                displays.leadsValue.textContent = values.monthlyLeads;
+                displays.policyDisplay.textContent = '$' + values.policyValue;
+                displays.closeDisplay.textContent = Math.round(values.closeRate * 100) + '%';
+                displays.costDisplay.textContent = '$' + values.leadCost;
+                
+                // Calculate current performance
+                const currentClosedDeals = values.monthlyLeads * values.closeRate;
+                const currentRevenue = currentClosedDeals * values.policyValue;
+                const totalAdSpend = values.monthlyLeads * values.leadCost;
+                const wastedSpend = totalAdSpend - (currentClosedDeals * values.leadCost);
+                
+                // Calculate with LeadGuard Pro (73% improvement)
+                const improvedCloseRate = Math.min(values.closeRate * 1.73, 0.45);
+                const newClosedDeals = values.monthlyLeads * improvedCloseRate;
+                const newRevenue = newClosedDeals * values.policyValue;
+                const additionalRevenue = newRevenue - currentRevenue;
+                const annualGain = additionalRevenue * 12;
+                
+                // ROI Calculation (system costs $497/month)
+                const systemCost = 497;
+                const roi = ((additionalRevenue - systemCost) / systemCost) * 100;
+                const paybackDays = Math.ceil((systemCost / additionalRevenue) * 30);
+                
+                // Update results
+                document.getElementById('currentRevenue').textContent = '$' + Math.round(currentRevenue).toLocaleString();
+                document.getElementById('wastedSpend').textContent = '$' + Math.round(wastedSpend).toLocaleString();
+                document.getElementById('newRevenue').textContent = '$' + Math.round(newRevenue).toLocaleString();
+                document.getElementById('additionalRevenue').textContent = '+$' + Math.round(additionalRevenue).toLocaleString();
+                document.getElementById('annualGain').textContent = '+$' + Math.round(annualGain).toLocaleString();
+                document.getElementById('roiPercent').textContent = Math.round(roi) + '%';
+                document.getElementById('paybackTime').textContent = paybackDays + ' days';
+                
+                // Update ROI circle
+                const roiCircle = document.getElementById('roiCircle');
+                const circumference = 2 * Math.PI * 60;
+                const progress = Math.min(roi / 2000, 1); // Cap at 2000% for visual
+                const offset = circumference - (progress * circumference);
+                roiCircle.style.strokeDashoffset = offset;
+            }
+            
+            // Add event listeners
+            Object.values(inputs).forEach(input => {
+                input.addEventListener('input', updateCalculator);
+            });
+            
+            // Initial calculation
+            updateCalculator();
+        }
+
+        // Smooth Scrolling
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Intersection Observer for Animations
+        function setupScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe timeline steps and cards
+            document.querySelectorAll('.hover-lift, .glass-card').forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Button Click Effects
+        function setupButtonEffects() {
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Scale animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            startLossCounter();
+            setupCalculator();
+            setupSmoothScrolling();
+            setupScrollAnimations();
+            setupButtonEffects();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95f89c1ad06cc34e',t:'MTc1MjU3NTY5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
